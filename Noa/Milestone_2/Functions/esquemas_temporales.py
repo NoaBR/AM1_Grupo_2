@@ -45,17 +45,6 @@ def newton_function(G: callable, U0: array) -> array:
 
     raise RuntimeError("Newton's method did not converge after 50 iterations")
 
-def Jacobian(G: callable, x: array, h: float) -> array:
-    n = len(x)
-    J = zeros((n, n))
-    for i in range(n):
-        e = zeros(n)
-        e[i] = 1
-        x_plus = x + h * e
-        x_minus = x - h * e
-        J[:, i] = (G(x_plus) - G(x_minus)) / (2 * h)
-    return J
-
 
 def oscilador(U: array) -> array:
     return array([U[1], -U[0]])
