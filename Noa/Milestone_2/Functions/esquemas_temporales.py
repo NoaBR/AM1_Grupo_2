@@ -1,7 +1,8 @@
 from numpy import array, zeros
 from numpy.linalg import norm, solve
 from scipy.optimize import fsolve
-from non_linear_solver import Jacobian
+from Milestone_2.Functions.non_linear_solver import Jacobian
+from Milestone_2.Functions.non_linear_solver import newton_function
 
 def Euler_Function(F: callable, U0: array, Dt: float) -> array:
 

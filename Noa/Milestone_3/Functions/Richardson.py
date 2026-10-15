@@ -1,6 +1,6 @@
 from numpy import array, zeros, ones, linspace, sin, cos, pi
 
-def error_richardson(order: int, coarse: int, fine: int) -> float:
+def error_richardson(order: int, coarse: array, fine: array) -> float:
 
      E = (fine - coarse) / (2**order - 1)
 

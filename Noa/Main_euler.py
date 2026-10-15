@@ -1,6 +1,6 @@
 from numpy import array, zeros
 import matplotlib.pyplot as plt
-from Functions.esquemas_temporales import Euler_Function
+from Milestone_2.Functions.esquemas_temporales import Euler_Function
 
 
 
@@ -17,7 +17,7 @@ def F(U: array) -> array:
 
 
 for n in range(0, N):
-    U[n + 1, :] = Euler_Function(Dt, F, U[n, :])
+    U[n + 1, :] = Euler_Function(F, U[n, :], Dt)
 
 plt.plot(U[:, 0], U[:, 1])
 plt.show()

@@ -1,9 +1,9 @@
 from numpy import array, zeros
 import matplotlib.pyplot as plt
-from .esquemas_temporales import Crank_Nicolson_function, Euler_Function,  Inverse_Euler_Function, RK4_function, Crank_function
+from Milestone_2.Functions.esquemas_temporales import Crank_Nicolson_function, Euler_Function,  Inverse_Euler_Function, RK4_function, Crank_function
 
 
-def Cauchy(F:callable, U0:  array, scheme:str, t:array) -> None:
+def Cauchy(F:callable, U0:  array, scheme:str, t:array, plot: bool = True) -> array:
 
      Nv = len(U0)
      N = len(t) - 1
@@ -29,8 +29,17 @@ def Cauchy(F:callable, U0:  array, scheme:str, t:array) -> None:
         else :
             print('Scheme not implemented')
 
-     plt.plot(U[:, 0], U[:, 1])
-     plt.show()
+     if plot:
+         plt.figure()
+         plt.plot(U[:, 0], U[:, 1])
+         plt.xlabel('u1')
+         plt.ylabel('u2')
+         plt.title(f'Phase portrait ({scheme})')
+         plt.axis('equal')
+         plt.grid(True)
+         plt.show()
+
+     return U
 
      
 def partition(a: float, b: float, N: int) -> list:

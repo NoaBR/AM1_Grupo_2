@@ -1,6 +1,6 @@
 from numpy import array, zeros
 from numpy.linalg import norm, solve
-from Jacobian import Jacobian
+from Milestone_2.Functions.Jacobian import Jacobian
 
 def newton_function(G: callable, U0: array) -> array:
     x = U0.copy()
