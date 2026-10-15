@@ -1,4 +1,4 @@
-from Functions.Cauchy import Cauchy
+from Functions.Integrators import Cauchy
 from numpy import array
 from numpy.linalg import norm
 

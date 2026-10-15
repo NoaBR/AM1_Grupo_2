@@ -1,6 +1,6 @@
 from numpy import array, zeros
-from Functions.Cauchy import Cauchy
-from Functions.esquemas_temporales import oscilador
+from Functions.Integrators import Cauchy
+from Functions.Integrators import oscilador
 
 t = zeros(1000)
 for i in range(0, 1000):
