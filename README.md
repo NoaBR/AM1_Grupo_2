@@ -1,2 +1,9 @@
-# AM1_Grupo_2
-This repository contains milestones and projects from Group 2 of "Ampliación de matemáticas 1" of MUSE master. Group formed by Mara López, Andoni Ladislao Echenausía, Daniel Rodríguez and Noa Benito. 
+# Problema del eje intermedio
+
+El código está en la carpeta `problema del eje intermedio final/`. Se ejecuta con `main.py`.
+
+Está organizado en tres carpetas:
+
+- `capa_fisica/`: la física del problema (ecuaciones de Euler, invariantes, Poinsot).
+- `capa_matematica/`: los métodos numéricos (esquemas temporales, estabilidad, Richardson, convergencia).
+- `gui/`: la interfaz gráfica.
