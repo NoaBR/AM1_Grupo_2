@@ -156,7 +156,7 @@ def dibujar_diagnostico() -> None:
             veredicto = 'crece (inestable físico)'
         elif fisica_inestable and maxR < 1 - 1e-9:
             # la física crece, pero el esquema lo amortigua: |R| < 1 con λ real > 0
-            veredicto = 'FALSA ESTABILIDAD: decae'
+            veredicto = 'decae (falsa estabilidad)'
         elif fisica_inestable:
             veredicto = 'no crece (num.); físico: crece'
         elif abs(maxR - 1) < 1e-9:
