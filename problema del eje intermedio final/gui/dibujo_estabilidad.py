@@ -152,8 +152,13 @@ def dibujar_diagnostico() -> None:
     for puesto, (maxR, z) in enumerate(estado['eq']):
         # λ real positivo: silla (margen relativo por el ruido del Jacobiano numérico)
         fisica_inestable = np.max(z.real) > 1e-6 * max(np.abs(z).max(), 1e-300)
-        if fisica_inestable:
+        if fisica_inestable and maxR > 1 + 1e-9:
             veredicto = 'crece (inestable físico)'
+        elif fisica_inestable and maxR < 1 - 1e-9:
+            # la física crece, pero el esquema lo amortigua: |R| < 1 con λ real > 0
+            veredicto = 'FALSA ESTABILIDAD: decae'
+        elif fisica_inestable:
+            veredicto = 'no crece (num.); físico: crece'
         elif abs(maxR - 1) < 1e-9:
             veredicto = 'neutro: conserva'
         elif maxR < 1:
@@ -163,7 +168,7 @@ def dibujar_diagnostico() -> None:
         a.text(0.04, 0.64 - 0.11 * puesto,
                f'{NOMBRE_EJE[puesto]:15s} max|R| = {maxR:.6f}  {veredicto}',
                transform=a.transAxes, color=COLOR_EJE[puesto], fontsize=8)
-    texto = ('Ejes menor y mayor: el valor exacto es |R| = 1\n'
-             '(giro estable que ni crece ni decae).\n'
-             'Eje intermedio: |R| > 1 es la física correcta.')
+    texto = ('Menor y mayor: lo exacto es |R| = 1.\n'
+             'Intermedio: |R| > 1 es lo correcto;\n'
+             '|R| < 1 sería falsa estabilidad.')
     a.text(0.04, 0.08, texto, transform=a.transAxes, color=GRIS, fontsize=7.5)

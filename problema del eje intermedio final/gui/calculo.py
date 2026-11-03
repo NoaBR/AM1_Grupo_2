@@ -3,6 +3,8 @@ calculo.py  —  ORQUESTADOR (puente entre capas)
 Junta la capa física con la capa matemática. No dibuja nada.
 Es el único módulo de la GUI que llama a las dos capas a la vez.
 """
+from __future__ import annotations
+
 from typing import Callable
 
 import numpy as np

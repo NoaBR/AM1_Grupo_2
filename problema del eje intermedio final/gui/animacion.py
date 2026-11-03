@@ -16,6 +16,8 @@ Por qué ahora el giro es fluido:
      ω de forma lineal y la orientación con un giro de Rodrigues parcial.
      Así el satélite no salta de un paso de la integración al siguiente.
 """
+from __future__ import annotations
+
 import time
 
 import numpy as np

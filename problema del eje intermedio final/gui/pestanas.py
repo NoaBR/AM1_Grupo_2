@@ -8,6 +8,8 @@ OJO: ocultar no basta. Los botones de matplotlib (Button) reciben el clic
 aunque su panel esté oculto, y como los de las dos pestañas ocupan el mismo
 sitio, el botón oculto "robaba" el clic al visible. Por eso se desactivan.
 """
+from __future__ import annotations
+
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Button, Widget
 

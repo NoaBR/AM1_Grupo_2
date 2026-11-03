@@ -12,6 +12,8 @@ Todo depende solo de los momentos de inercia y de los invariantes, y son
 resultados exactos: no usa ningún método numérico ni sabe nada de la GUI.
 Convención: omega = [ω1, ω2, ω3] en ejes cuerpo, I = [I1, I2, I3].
 """
+from __future__ import annotations
+
 import numpy as np
 
 from .fisica import invariant_energy, invariant_angular_momentum

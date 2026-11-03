@@ -10,6 +10,8 @@ El Jacobiano NO está aquí: lo calcula la capa matemática (jacobiano.py)
 para cualquier sistema de ecuaciones.
 Convención: omega = [ω1, ω2, ω3] en ejes cuerpo, I = [I1, I2, I3].
 """
+from __future__ import annotations
+
 import numpy as np
 
 

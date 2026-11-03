@@ -4,6 +4,8 @@ Estabilidad absoluta (región |R| <= 1 calculada con el propio esquema), error p
 extrapolación de Richardson, ratio de convergencia y deriva de invariantes.
 No sabe nada de la física: todo recibe F o z como argumento.
 """
+from __future__ import annotations
+
 from typing import Callable
 
 import numpy as np

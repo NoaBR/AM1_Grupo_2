@@ -3,6 +3,8 @@ panel_teorema.py  —  pestaña 1
 Sliders, botones, selector de integrador y casillas del mapa de fases,
 y la función al_cambiar_teorema(), que se ejecuta cada vez que el usuario toca un control.
 """
+from __future__ import annotations
+
 from typing import Callable
 
 import numpy as np
