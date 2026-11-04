@@ -7,6 +7,8 @@ Funciones que dibujan cada panel:
 Se llaman cada vez que cambia un parámetro. Dejan en `estado` los elementos
 vacíos que luego animar() irá moviendo.
 """
+from __future__ import annotations
+
 import numpy as np
 from matplotlib.axes import Axes
 from matplotlib.lines import Line2D

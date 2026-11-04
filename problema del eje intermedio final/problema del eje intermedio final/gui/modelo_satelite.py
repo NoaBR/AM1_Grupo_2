@@ -10,6 +10,8 @@ y despejando:
     a² ∝ I2 + I3 − I1,    b² ∝ I1 + I3 − I2,    c² ∝ I1 + I2 − I3
 El eje de MENOR inercia es el lado MÁS LARGO. Los paneles solares son decorativos.
 """
+from __future__ import annotations
+
 import numpy as np
 
 from .ajustes import ROJO

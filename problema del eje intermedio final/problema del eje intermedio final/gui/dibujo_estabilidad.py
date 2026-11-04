@@ -152,7 +152,10 @@ def dibujar_diagnostico() -> None:
     for puesto, (maxR, z) in enumerate(estado['eq']):
         # λ real positivo: silla (margen relativo por el ruido del Jacobiano numérico)
         fisica_inestable = np.max(z.real) > 1e-6 * max(np.abs(z).max(), 1e-300)
-        if fisica_inestable:
+        if fisica_inestable and maxR <= 1 + 1e-9:
+            # λ real > 0 (la física crece) pero los dos autovalores caen dentro de la región
+            veredicto = 'decae (falsa estabilidad)'
+        elif fisica_inestable:
             veredicto = 'crece (inestable físico)'
         elif abs(maxR - 1) < 1e-9:
             veredicto = 'neutro: conserva'

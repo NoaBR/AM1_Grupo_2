@@ -5,6 +5,8 @@ RK4), el problema de Cauchy y la malla temporal (partition).
 No sabe nada de la física concreta: todo recibe F.
 Los esquemas implícitos resuelven su ecuación con newton() (Newton + Gauss).
 """
+from __future__ import annotations
+
 from typing import Callable
 
 import numpy as np

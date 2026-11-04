@@ -3,6 +3,7 @@ panel_estabilidad.py  —  pestaña 2
 Sliders, selectores y botón, y la función al_cambiar_estabilidad(),
 que se ejecuta cada vez que el usuario toca un control.
 """
+from __future__ import annotations
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Button, RadioButtons, Slider
 
